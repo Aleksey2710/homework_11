@@ -20,7 +20,6 @@ public class Main {
     public static void printLeapYear(int yearValue) {
         System.out.println(yearValue + " год - високосный.");
     }
-
     public static void printNotLeapYear(int yearValue) {
         System.out.println(yearValue + " год - не високосный.");
     }
