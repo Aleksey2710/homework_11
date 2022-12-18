@@ -1,5 +1,7 @@
 package com.skypro.homework_11;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -27,18 +29,20 @@ public class Main {
         System.out.println("Задача 2");
 
         int clientOS = 0;
-        int clientDeviceYear = 2011;
+        int clientDeviceYear = 2020;
         choiceOS(clientOS, clientDeviceYear);
         }
 
     public static void choiceOS(int a, int b) {
-        if (a == 0 && b < 2015) {
+        int currentYear = LocalDate.now().getYear();
+
+        if (a == 0 && b < currentYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (a == 0 && b >= 2015) {
+        } else if (a == 0 && b >= currentYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (a == 1 && b < 2015) {
+        } else if (a == 1 && b < currentYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (a == 1 && b >= 2015) {
+        } else if (a == 1 && b >= currentYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Такой версии не существует!");
